@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 // 编译less
 gulp.task('build-less', function() {
 	gulp.src('./public/less/*.less')
-		.pipe(less({ compress: true }))
+		.pipe(less({ compress: false }))
 		.on('error', function(e) {console.log(e);})
 		.pipe(gulp.dest('./public/pre_css/'));
 });
