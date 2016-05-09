@@ -2,9 +2,46 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>test</title>
+	<title>koa-mailer</title>
+	<meta name="description" content="just for mail">
+	<meta property="og:type" content="mail">
+	<meta property="og:title" content="koa-mailer | by sharlly-yin">
+	<meta property="og:url" content="http://www.yinxiangyu.com:5000">
+	<meta charset='utf-8'>
+	<link rel="stylesheet" type="text/css" href="./css/all.min.css">
+	<script type="text/javascript" src="http://g.alicdn.com/kissy/k/1.4.7/seed.js"></script>
 </head>
 <body>
-	<div>123</div>
+	<header>
+		<p class="mail_header">koa-mailer</p>
+	</header>
+	<nav>
+		<ul class="mail_nav">
+			<li>写邮件</li>
+			<li>邮件箱</li>
+			<li>登录</li>
+		</ul>
+	</nav>
+	<section>
+		<div class="mail_login">
+			<div class="login_close"></div>
+			<div class="login_left">
+				<p class="login_title">Login</p>
+				<form>
+					<input type="text" placeholder="Username"/>
+					<input type="password" placeholder="Password"/>
+					<input type="submit" value=""/>
+				</form>
+			</div>
+			<div class="login_right">
+				<p class="login_title">Advice</p>
+				<p class="advice_mesg">基于QQ的邮件服务器</p>
+				<p class="advice_mesg2">请先激活QQ邮箱中的</p>
+				<p class="advice_mesg2">· POP3/SMTP服务</p>
+				<p class="advice_mesg2">· IMAP/SMTP服务</p>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="./pre_js/index.js"></script>
 </body>
 </html>

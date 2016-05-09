@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>koa-mailer</title>
+	<meta name="description" content="just for mail">
+	<meta property="og:type" content="mail">
+	<meta property="og:title" content="koa-mailer | by sharlly-yin">
+	<meta property="og:url" content="http://www.yinxiangyu.com:5000">
+	<meta charset='utf-8'>
+	<link rel="stylesheet" type="text/css" href="./css/all.min.css">
+	<script type="text/javascript" src="http://g.alicdn.com/kissy/k/1.4.7/seed.js"></script>
+</head>
+<body>
+	<header>
+		<p class="mail_header">koa-mailer</p>
+	</header>
+	<nav>
+		<ul class="mail_nav">
+			<li>写邮件</li>
+			<li style="font-weight:bolder">邮件箱</li>
+			<li>欢迎，874875702!</li>
+		</ul>
+	</nav>
+	<article>
+		<div class="mail_list">
+			<div class="mail_split"></div>
+			<div class="mail_list_mesg">
+				<span class="mail_sender">发件人</span>
+				<span class="mail_subject">主题</span>
+				<span class="mail_recivedTime">时间</span>
+			</div>
+			<% if(mail_data){ %>
+			<ul>
+				<p>今天</p>
+				<% mail_data.forEach(function(mesg, index) { if(mesg.date.isToday) { %>	
+				<li>
+					<span class="mail_sender"><%= mesg.from_name%></span>
+					<span class="mail_subject"><%= mesg.subject %></span>
+					<span class="mail_recivedTime"><%= mesg.date.receivedDate %></span>
+				</li>
+				<% }}); %>
+
+				<p>更早</p>
+				<% mail_data.forEach(function(mesg, index) { if(!mesg.date.isToday) { %>
+				<li>
+					<span class="mail_sender"><%= mesg.from_name%></span>
+					<span class="mail_subject"><%= mesg.subject %></span>
+					<span class="mail_recivedTime"><%= mesg.date.receivedDate %></span>
+				</li>
+				<% }}); %>
+			</ul>
+			<% } %>
+		</div>	
+	</article>
+</body>
+</html>

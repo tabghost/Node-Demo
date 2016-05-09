@@ -1,0 +1,186 @@
+@font_size: 25px;
+@m_width:   80%;
+@m_height:  40px;
+.mail-border-radius (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+
+
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: '微软雅黑', sans-serif, Georgia;
+}
+
+body {
+	min-width: 1220px;
+}
+
+.mail_header {
+	width: @m_width;
+	font-size: @font_size;
+	height: @m_height;
+	line-height: 40px;
+	font-weight: 700;
+    margin: 0 auto;
+    border-bottom: 2px solid #333;
+}
+
+.mail_nav {
+    width: @m_width;
+    font-size: @font_size - 8;
+    height: @m_height - 10px;
+    list-style: none;
+    margin: 0 auto;
+    margin-top: 7px;
+	li {
+		cursor: pointer;
+		float: left;
+		margin-right: 20px;
+		transition: all 0.3s ease-in-out;
+		&:last-child {
+			float: right;
+			margin-right: 0px;
+		}
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.mail_login {
+	width: 547px;
+	height: 278px;
+	background: url('../imgs/mail_login.png') no-repeat 0px 0px;
+	margin: 0 auto;
+	margin-top: 60px;
+	display: none;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	position: relative;
+	.login_close {
+		background: url('../imgs/login_close.png') no-repeat 0px 0px;
+		position: absolute;
+		width: 32px;
+		height: 34px;
+		right: -10px;
+		top: -10px;
+		cursor: pointer;
+	}
+	.login_left, .login_right {
+		float: left;	
+		p.login_title {
+			color: #fff;
+			font-size: @font_size;
+			height: 80px;
+			line-height: 80px;
+			text-indent: 25px; 
+		}
+		p.advice_mesg {
+			color: #fff;
+			text-indent: 25px;
+			font-size: 16px;
+			margin-bottom: 15px;
+		}
+		p.advice_mesg2 {
+			color: #fff;
+			text-indent: 25px;
+			font-size: 14px;
+			margin-bottom: 5px;
+		}
+	}
+	.login_left {
+		width: 350px;
+		form {
+			margin-top: 5px;
+			height: 146px;
+			input {
+				.mail-border-radius;
+				display: block;
+				width: 270px;
+				margin:0 auto;
+				height: 35px;
+				outline: none;
+				border: none;
+				font-size: @font_size - 9;
+				text-indent: 15px;
+				box-shadow: inset 1px 1px #888;
+			}
+			input[type="text"] {
+				margin-bottom: 10px;
+			}
+			input[type="submit"] {
+				width: 83px;
+				height: 31px;
+				margin-top: 35px;
+				float: left;
+				margin-left: 40px;
+				background: url('../imgs/login_click.png') no-repeat 0px 0px;
+				box-shadow: inset 0px 0px #888;
+				cursor: pointer;
+			}
+		}
+	}
+	.login_right {
+		width: 197px;
+	}
+}
+
+
+.mail_list {
+	width: @m_width;
+	height: 400px;
+	margin: 0 auto;
+	.mail_split {
+		height: 2px;
+		background: #000;
+	}
+	.mail_list_mesg {
+		height: 37px;
+		line-height: 37px;
+		span {
+			display: inline-block;
+		}
+		span.mail_sender {
+			width: 20%;
+		}
+		span.mail_subject {
+			width: 65.5%;
+		}
+		span.mail_recivedTime {
+			width: 13.5%;
+		}
+	}
+	ul {
+		list-style: none;
+		font-size: 13px;
+		p {
+			font-weight: bold;
+			float: left;
+			margin-left: -50px;
+		}
+		li {
+			margin-bottom: 5px;
+			span {
+				display: inline-block;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis; /*溢出省略号，支持ie、safari（webkit）*/
+				-o-text-overflow: ellipsis; /*溢出省略号，支持opera*/
+			}
+			span.mail_sender {
+				width: 20%;
+			}
+			span.mail_subject {
+				width: 65.5%;
+			}
+			span.mail_recivedTime {
+				width: 13.5%;
+			}
+		}
+	}
+}

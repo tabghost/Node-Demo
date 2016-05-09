@@ -14,7 +14,7 @@ gulp.task('build-less', function() {
 
 // 合并压缩
 gulp.task('min-concat', ['build-less'], function() {
-	gulp.src(['./public/pre_css/*.css'])
+	gulp.src('./public/pre_css/*.css')
 		// 合并为all.css并输出
 		.pipe(concat('all.css'))
 		.pipe(gulp.dest('./public/css/'))

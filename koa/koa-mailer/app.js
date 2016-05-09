@@ -3,8 +3,10 @@ var app = require('koa')()
   , logger = require('koa-logger')
   , json = require('koa-json')
   , views = require('koa-views')
-  , onerror = require('koa-onerror');
+  , onerror = require('koa-onerror')
+  , mongoose = require('./config/mongoose.js');
   
+var db = mongoose();
 // global middlewares
 app.use(views('views', {
   root: __dirname + '/views',
