@@ -17,8 +17,8 @@
 	</header>
 	<nav>
 		<ul class="mail_nav">
-			<li>写邮件</li>
-			<li style="font-weight:bolder">邮件箱</li>
+			<li><a href="/write">写邮件</a></li>
+			<li style="font-weight:bolder"><a href="/read">邮件箱</a></li>
 			<li>欢迎，874875702!</li>
 		</ul>
 	</nav>
@@ -40,8 +40,12 @@
 					<span class="mail_recivedTime"><%= mesg.date.receivedDate %></span>
 				</li>
 				<% }}); %>
-
-				<p>更早</p>
+				<li>
+					<span class="mail_sender"></span>
+					<span class="mail_subject"></span>
+					<span class="mail_recivedTime"></span>
+				</li>
+				<p>更早</p>		
 				<% mail_data.forEach(function(mesg, index) { if(!mesg.date.isToday) { %>
 				<li>
 					<span class="mail_sender"><%= mesg.from_name%></span>

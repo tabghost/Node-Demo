@@ -7,5 +7,7 @@ module.exports = function(app) {
 	app.use(router.routes());
 
 	router.get('/', user.index);
-	router.get('/read', mailbox.read_mail);
+	router.get('/write', mailbox.write_mail);
+	router.get('/read', mailbox.read_mail_get);
+	router.post('/read', mailbox.read_mail_post);
 }

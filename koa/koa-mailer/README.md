@@ -2,7 +2,7 @@
 基于koa的邮件收发系统
 
 ### 目录结构
-* app.js [启动入口点]()
+* app.js [启动入口点](https://github.com/yxy19950717/Node-Demo/tree/master/koa/koa-mailer/app.js)
 * gulpfile.js [gulp构建文件]()
 * /config [mongodb与mongoose的配置]()
 * /controller [路由过来后的函数控制器]()

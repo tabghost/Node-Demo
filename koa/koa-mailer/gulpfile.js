@@ -6,24 +6,23 @@ var gulp = require('gulp'),
 
 // 编译less
 gulp.task('build-less', function() {
-	gulp.src('./public/less/*.less')
-		.pipe(less({ compress: false }))
-		.on('error', function(e) {console.log(e);})
-		.pipe(gulp.dest('./public/pre_css/'));
+	gulp.src('public/less/*.less')
+		.pipe(less({compress: false}))
+		.pipe(gulp.dest('public/pre_css/'));
 });
 
 // 合并压缩
 gulp.task('min-concat', ['build-less'], function() {
-	gulp.src('./public/pre_css/*.css')
+	gulp.src('public/pre_css/*.css')
 		// 合并为all.css并输出
 		.pipe(concat('all.css'))
-		.pipe(gulp.dest('./public/css/'))
+		.pipe(gulp.dest('public/css/'))
 		// 重命名为all.min.css并输出
 		.pipe(rename({suffix: '.min'}))
 		.pipe(minifycss())
-		.pipe(gulp.dest('./public/css/'));
+		.pipe(gulp.dest('public/css/'));
 });
 
 gulp.task('dev', function() {
-	gulp.watch('./public/less/*.less', ['build-less', 'min-concat']);
+	gulp.watch('public/less/*.less', ['build-less', 'min-concat']);
 });

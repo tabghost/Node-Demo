@@ -4,9 +4,11 @@ var app = require('koa')()
   , json = require('koa-json')
   , views = require('koa-views')
   , onerror = require('koa-onerror')
-  , mongoose = require('./config/mongoose.js');
+  , mongoose = require('./config/mongoose.js')
+  , session = require('koa-session');
   
 var db = mongoose();
+app.keys = ['some secret hurr'];
 // global middlewares
 app.use(views('views', {
   root: __dirname + '/views',
@@ -15,6 +17,8 @@ app.use(views('views', {
 app.use(require('koa-bodyparser')());
 app.use(json());
 app.use(logger());
+app.use(session(app))
+
 
 app.use(function *(next){
   var start = new Date;

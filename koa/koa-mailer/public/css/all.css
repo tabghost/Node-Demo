@@ -36,6 +36,10 @@ body {
 .mail_nav li:hover {
   text-decoration: underline;
 }
+.mail_nav li a {
+  color: #000;
+  text-decoration: none;
+}
 .mail_login {
   width: 547px;
   height: 278px;
@@ -133,6 +137,7 @@ body {
 .mail_list .mail_list_mesg {
   height: 37px;
   line-height: 37px;
+  font-weight: 700;
 }
 .mail_list .mail_list_mesg span {
   display: inline-block;
