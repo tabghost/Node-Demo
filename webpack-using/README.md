@@ -15,24 +15,30 @@ webpack及其相关插件使用
 - 代码分割Code Splitting
 
 webpack配置文件webpack.config.js
-- <div style="background:#ddd;display:inline-block;margin-right:10px;">entry(Obj)</div> 入口点,需要打包的文件从这里载入
-
-- <div style="background:#ddd;display:inline-block;margin-right:10px;">output(Obj)</div> 输出,经webpack打包输出后的文件
+- `entry(Obj)` 入口点,需要打包的文件从这里载入
+- `output(Obj)` 输出,经webpack打包输出后的文件
 
 webpack基本指令
-- <div style="background:#ddd;display:inline-block;margin-right:10px;">webpack</div> 编译
-
-- <div style="background:#ddd;display:inline-block;margin-right:10px;">webpack -p</div> 编译及压缩(类似grunt/gulp中的js代码压缩)
-
-- <div style="background:#ddd;display:inline-block;margin-right:10px;">webpack --watch</div> 开发中监听文件变动来进行编译
-
-- <div style="background:#ddd;display:inline-block;margin-right:10px;">webpack -d</div> 编译输出maps
-
-- <div style="background:#ddd;display:inline-block;margin-right:10px;">webpack --progress</div> 显示构建进度
-
-- <div style="background:#ddd;display:inline-block;margin-right:10px;">webpack --display-error-details</div> 显示在编译中的详细错误
-
-- <div style="background:#ddd;display:inline-block;margin-right:10px;">webpack --profile</div> 显示每一步的耗时
+- `webpack` 编译
+- `webpack -p` 编译及压缩(类似grunt/gulp中的js代码压缩)
+- `webpack --watch` 开发中监听文件变动来进行编译
+- `webpack -d` 编译输出maps
+- `webpack --progress` 显示构建进度
+- `webpack --display-error-details` 显示在编译中的详细错误
+- `webpack --profile` 显示每一步的耗时
 
 
 ### webpack-dev-server
+```
+    npm install -g webpack-dev-server
+    npm install --save-dev webpack-dev-server
+```
+webpack-dev-server是一个小型的Node.js express服务器，它使用webpack-dev-middleware中间件来为通过webpack打包生成的资源文件提供Web服务。webpack-dev-server发送关于编译状态的消息到客户端，客户端根据消息作出响应，即可以同步刷新浏览器。
+
+webpack-dev-server基本指令
+- `webpack-dev-server` 在本地8080端口创建一个服务器
+- `webpack-dev-server --progress` 显示进度
+- `webpack-dev-server --color` 显示命令行颜色
+- `webpack-dev-server --content-base build` 将服务的根目录设置为build目录
+- `webpack-dev-server --hot` 开启代码热替换
+- `webpack-dev-server --port 3000` 设置端口为3000
