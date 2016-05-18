@@ -17,6 +17,8 @@ webpack及其相关插件使用
 webpack配置文件webpack.config.js
 - `entry(Obj)` 入口点,需要打包的文件从这里载入
 - `output(Obj)` 输出,经webpack打包输出后的文件
+- `plugins(arr)` 插件,例如提取代码共同部分
+- `module(obj)` 统一单元模块处理
 
 webpack基本指令
 - `webpack` 编译
