@@ -19,7 +19,6 @@ app.use(json());
 app.use(logger());
 app.use(session(app))
 
-
 app.use(function *(next){
   var start = new Date;
   yield next;

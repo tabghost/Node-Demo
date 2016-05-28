@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>koa-mailer</title>
+	<meta name="description" content="just for mail">
+	<meta property="og:type" content="mail">
+	<meta property="og:title" content="koa-mailer | by sharlly-yin">
+	<meta property="og:url" content="http://www.yinxiangyu.com:5000">
+	<meta charset='utf-8'>
+	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
+	<script type="text/javascript" src="http://g.alicdn.com/kissy/k/1.4.7/seed.js"></script>
+</head>
+<body>
+	<header>
+		<p class="mail_header">koa-mailer</p>
+	</header>
+	<nav>
+		<ul class="mail_nav">
+			<li><a href="/write">写邮件</a></li>
+			<li style="font-weight:bolder"><a href="/read">邮件箱</a></li>
+			<li>欢迎,<%= username %></li>
+		</ul>
+	</nav>
+	<article>
+		<div class="mail_content">
+			<p style="font-weight: bolder;margin-bottom:20px">邮件主题: <%= title %></p>
+			<p style="font-weight: bolder;margin-bottom:5px;">邮件内容:</p>
+			<%- html %>
+		</div>
+	</article>
+		
+</body>
+</html>

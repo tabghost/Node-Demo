@@ -182,10 +182,56 @@ body {
 			}
 			span.mail_subject {
 				width: 65.5%;
+				a {
+ 					text-decoration: none;
+ 					color: #222;
+ 					transition: all 0.5s ease-in-out;
+					&:hover{
+						text-decoration: underline;
+						color: #000;
+					}
+				}
 			}
 			span.mail_recivedTime {
 				width: 13.5%;
 			}
 		}
 	}
+	.mail_send_mesg {
+		label {
+			display: block;
+			margin-top: 5px;
+		}
+		input {
+			display: block;
+			margin-top: 5px;
+			width: 40%;
+		}
+		textarea {
+			width: 40%;
+			height: 200px;
+		}
+		input[type="submit"] {
+			width: 80px;
+			height: 40px;
+			border: none;
+			outline: none;
+			background: #999;
+			transition: all 0.5s ease-in-out;
+			cursor: pointer;
+			color: #fff;
+			font-size: 16px;
+			.mail-border-radius;
+			&:hover {
+				background: #555;
+			}
+		}
+	}
+}
+
+.mail_content{
+	width: @m_width;
+    font-size: @font_size - 8;
+    margin: 0 auto;
+    margin-top: 40px;
 }

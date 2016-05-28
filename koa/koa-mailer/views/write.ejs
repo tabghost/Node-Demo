@@ -19,8 +19,25 @@
 		<ul class="mail_nav">
 			<li style="font-weight:bolder"><a href="/write">写邮件</a></li>
 			<li><a href="/read">邮件箱</a></li>
-			<li>欢迎，874875702!</li>
+			<li>欢迎，<%= username %></li>
 		</ul>
 	</nav>
+	<article>
+		<div class="mail_list">
+			<div class="mail_split"></div>
+			<form class="mail_send_mesg">
+				<label for="sender">昵称</label>
+				<input id="sender" type="text" value="" />
+				<label for="receiver">收件人</label>
+				<input id="receiver" type="text" value="" />
+				<label for="subject">主题</label>
+				<input id="subject" type="text" value="" />
+				<label for="html_mesg">正文</label>
+				<textarea id="html_mesg" ></textarea> 
+				<input type="submit" id="mail_sub" value="发送">
+			</form>
+		</div>
+	</article>
+	<script type="text/javascript" src="./pre_js/write.js"></script>
 </body>
 </html>

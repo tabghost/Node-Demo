@@ -178,6 +178,53 @@ body {
 .mail_list ul li span.mail_subject {
   width: 65.5%;
 }
+.mail_list ul li span.mail_subject a {
+  text-decoration: none;
+  color: #222;
+  transition: all 0.5s ease-in-out;
+}
+.mail_list ul li span.mail_subject a:hover {
+  text-decoration: underline;
+  color: #000;
+}
 .mail_list ul li span.mail_recivedTime {
   width: 13.5%;
+}
+.mail_list .mail_send_mesg label {
+  display: block;
+  margin-top: 5px;
+}
+.mail_list .mail_send_mesg input {
+  display: block;
+  margin-top: 5px;
+  width: 40%;
+}
+.mail_list .mail_send_mesg textarea {
+  width: 40%;
+  height: 200px;
+}
+.mail_list .mail_send_mesg input[type="submit"] {
+  width: 80px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: #999;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+.mail_list .mail_send_mesg input[type="submit"]:hover {
+  background: #555;
+}
+.mail_content {
+  width: 80%;
+  font-size: 17px;
+  margin: 0 auto;
+  margin-top: 40px;
 }
